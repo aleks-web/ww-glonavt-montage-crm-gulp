@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+    <!-- Start include head -->
+    @@include('blocks/head.html', {
+        "title": "Восстановление пароля"
+    })
+    <!-- End include head -->
+
+    <!-- Start body -->
+    <body class="module-authorization">
+        
+        <div class="region">
+
+            <!-- Форма авторизации -->
+            <div class="authorization-form">
+                <div class="authorization-form__container">
+                    <form class="authorization-form__form">
+                        <div class="authorization-form__logo">
+                            <img src="/assets/img/glonavt_logo.svg" alt="Logo glonavt crm">
+                        </div>
+
+                        <h1 class="authorization-form__title">Восстановление пароля</h1>
+
+                        <div class="authorization-form__desc">
+                            Введите адрес электронной почты для восстановления пароля
+                        </div>
+
+                        <div class="authorization-form__inputs">
+                            <input type="email" name="email" autocomplete="on" required placeholder="Введите адрес электронной почты">
+                        </div>
+
+                        <div class="authorization-form__footer">
+                            <button class="authorization-form__btn btn disable">Отправить</button>
+                        </div>
+
+                        <div class="authorization-form__message error">
+                            <span class="authorization-form__message-text">Неверный проверочный код</span>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <!-- / Форма авторизации -->
+
+            <footer class="authorization-footer">
+                <a href="https://ww.net.ru" target="_blank" class="ww-logo authorization-footer__logo">
+                    <img src="/assets/img/ww_logo.svg" alt="logo">
+            
+                    <div class="ww-logo__desc">
+                        <span>Система разработана</span>
+                        <span>в веб-студии WW</span>
+                    </div>
+                </a>
+            </footer>
+        </div>
+
+        <!-- Start include footer -->
+        @@include('blocks/footer.html')
+        <!-- End include footer -->
+
+    </body>
+    <!-- END body -->
+</html>

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+    <!-- Start include head -->
+    @@include('blocks/head.html', {
+        "title": "Отчёт по заявкам"
+    })
+    <!-- End include head -->
+
+    <!-- Start body -->
+    <body class="module-clients">
+        
+        <div class="layout">
+            <!-- Start include menu -->
+            @@include('blocks/menu.html')
+            <!-- End include menu -->
+
+            <div class="main" id="main">
+
+                <!-- Start include header -->
+                @@include('blocks/header.html', {
+                    "title": "Отчёт по заявкам"
+                })
+                <!-- End include header -->
+
+                
+
+                <!-- Start region-content -->
+                <div class="region-content" id="region-content">
+                    
+                    <!-- Start control -->
+                    <div class="control">
+                        <div class="control__container">
+                            <div class="control__left">
+                                @@include('components/control-select.html', {"name": "Клиент"})
+                                @@include('components/control-date.html', {"name": "От"})
+                                @@include('components/control-date.html', {"name": "До"})
+                            </div>
+    
+                            <div class="control__right">
+                                <button class="control__btn btn">Сформировать</button>
+                                <button class="control__btn btn">Печать</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End control -->
+
+
+                    <!-- Start content table -->
+                    <div class="content-table">
+                        <div class="content-table__container">
+                            
+                            <div class="table">
+                                <!-- Start Заголовок таблицы -->
+                                <div class="table__header">
+                                    <span class="table__header-item table__item justify-content-start">Клиент</span>
+                                    <span class="table__header-item table__item justify-content-center text-center">Дата заявки</span>
+                                    <span class="table__header-item table__item justify-content-center text-center">№ заявки</span>
+                                    <span class="table__header-item table__item justify-content-start">Тип заявки</span>
+                                    <span class="table__header-item table__item justify-content-center">Тип/модель<br>устройства/датчика</span>
+                                    <span class="table__header-item table__item justify-content-center">SN</span>
+                                    <span class="table__header-item table__item justify-content-start">ID</span>
+                                    <span class="table__header-item table__item justify-content-start">Тип/модель/гос№<br>объекта</span>
+                                    <span class="table__header-item table__item justify-content-start">Комментарий</span>
+                                </div>
+                                <!-- End Заголовок таблицы -->
+
+                                <!-- Start тело таблицы -->
+                                <div class="table__body">
+                                    <div class="table__row table__row--pointer">
+                                        <div class="table__item justify-content-start">ООО Альянс</div>
+                                        <div class="table__item justify-content-center text-center">23.10.2023</div>
+                                        <div class="table__item justify-content-center text-center">123456</div>
+                                        <div class="table__item justify-content-center">Монтаж</div>
+                                        <div class="table__item justify-content-start">
+                                            <div class="table__text-row">
+                                                <span>Тахограф</span>
+                                                <span class="text-secondary">АТОЛ Drive 5</span>
+                                            </div>
+                                        </div>
+                                        <div class="table__item justify-content-center">004024</div>
+                                        <div class="table__item justify-content-start">004024</div>
+                                        <div class="table__item justify-content-start">
+                                            <div class="table__text-row">
+                                                <span>Х664МА72 LADA 4x4, 212140</span>
+                                                <span class="text-secondary">Легковой автомобиль</span>
+                                            </div>
+                                        </div>
+                                        <div class="table__item justify-content-start">Комментарий длинный даже в две строчки</div>
+                                    </div>
+                                </div>
+                                <!-- End тело таблицы -->
+                            </div>
+
+                        </div>
+                    </div>
+                    <!-- End content table -->
+
+                </div>
+                <!-- End region-content -->
+                
+            </div>
+        </div>
+
+        <!-- Start include footer -->
+        @@include('blocks/footer.html')
+        <!-- End include footer -->
+    </body>
+    <!-- END body -->
+</html>
