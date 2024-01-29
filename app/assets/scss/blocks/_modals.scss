@@ -47,7 +47,30 @@
         background-color: var(--clr-11);
         border-radius: 5px;
     }
+
+    &__table {
+        border-radius: 10px;
+        border: 1px solid var(--clr-10, transparent);
+        overflow: hidden;
+        margin-bottom: 1.5rem;
+
+        thead th:first-child,
+        tbody td:first-child {
+            padding-left: 20px;
+        }
+
+        thead th:last-child,
+        tbody td:last-child {
+            padding-right: 20px;
+        }
+
+        thead th {
+            padding: 10px;
+        }
+    }
 }
+// End основной класс модалки fancybox
+
 
 .fmodal__view-input {
     display: flex;

@@ -40,7 +40,7 @@
                             </div>
     
                             <div class="control__right">
-                                <button class="control__btn btn">Добавить</button>
+                                <button class="control__btn btn" data-fancybox data-src="#fmodal-order-work-new">Добавить</button>
                             </div>
                         </div>
                     </div>
@@ -50,43 +50,44 @@
                     <!-- Start content table -->
                     <div class="content-table content-table--control">
                         <div class="content-table__container">
-                            
-                            <div class="table">
-                                <!-- Start Заголовок таблицы -->
-                                <div class="table__header">
-                                    <div class="table__header-item table__item justify-content-center" style="width: 50%">Номер</div>
-                                    <div class="table__header-item table__item justify-content-center" style="width: 50%">Дата</div>
-                                    <div class="table__header-item table__item justify-content-start" style="width: 150%">Тип/модель/гос№<br>объекта</div>
-                                    <div class="table__header-item table__item justify-content-start" style="width: 50%">Клиент</div>
-                                    <div class="table__header-item table__item justify-content-start">Адрес</div>
-                                    <div class="table__header-item table__item justify-content-start">Телефон</div>
-                                    <div class="table__header-item table__item justify-content-start" style="width: 40%">Пробег</div>
-                                    <div class="table__header-item table__item justify-content-start">Причина</div>
-                                </div>
-                                <!-- End Заголовок таблицы -->
 
-                                <!-- Start тело таблицы -->
-                                <div class="table__body">
-                                    <div class="table__row table__row--pointer">
-                                        <div class="table__item justify-content-center" style="width: 50%">1</div>
-                                        <div class="table__item justify-content-center" style="width: 50%">23.10.2023</div>
-                                        <div class="table__item justify-content-start" style="width: 150%">
-                                            <div class="table__text-row">
-                                                <span>Х664МА72 LADA 4x4, 212140</span>
-                                                <span class="text-secondary">Легковой автомобиль</span>
-                                            </div>
-                                        </div>
-                                        <div class="table__item justify-content-start" style="width: 50%">ООО Альянс</div>
-                                        <div class="table__item justify-content-start">
-                                            629008, Ямало-Ненецкий<br>Автономный округ....
-                                        </div>
-                                        <div class="table__item justify-content-start">89224544565</div>
-                                        <div class="table__item justify-content-start" style="width: 40%">125286</div>
-                                        <div class="table__item justify-content-start">Заявка №123456<br>от 23.10.2023</div>
-                                    </div>
-                                </div>
-                                <!-- End тело таблицы -->
-                            </div>
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th class="text-center" width="5%">Номер</th>
+                                        <th class="text-center">Дата</th>
+                                        <th class="text-start">Тип/модель/гос№<br>объекта</th>
+                                        <th class="text-start">Клиент</th>
+                                        <th class="text-start">Адрес</th>
+                                        <th class="text-start">Телефон</th>
+                                        <th class="text-start">Пробег</th>
+                                        <th class="text-start">Причина</th>
+                                    </tr>
+                                </thead>
+
+                                <tbody>
+                                    <tr data-fancybox data-src="#fmodal-order-work-view" class="pointer">
+                                        <td class="text-center">1</td>
+                                        <td class="text-center">23.10.2023</td>
+                                        <td class="text-start"><span>Х664МА72 LADA 4x4, 212140</span><br><span class="text-secondary">Легковой автомобиль</span></td>
+                                        <td class="text-start">ООО Альянс</td>
+                                        <td class="text-start">629008, Ямало-Ненецкий<br>Автономный округ....</td>
+                                        <td class="text-start">89224544565</td>
+                                        <td class="text-start">125286</td>
+                                        <td class="text-start">Заявка №123456<br>от 23.10.2023</td>
+                                    </tr>
+                                    <tr data-fancybox data-src="#fmodal-order-work-view" class="pointer">
+                                        <td class="text-center">1</td>
+                                        <td class="text-center">23.10.2023</td>
+                                        <td class="text-start"><span>Х664МА72 LADA 4x4, 212140</span><br><span class="text-secondary">Легковой автомобиль</span></td>
+                                        <td class="text-start">ООО Альянс</td>
+                                        <td class="text-start">629008, Ямало-Ненецкий<br>Автономный округ....</td>
+                                        <td class="text-start">89224544565</td>
+                                        <td class="text-start">125286</td>
+                                        <td class="text-start">Заявка №123456<br>от 23.10.2023</td>
+                                    </tr>
+                                </tbody>
+                            </table>
 
                         </div>
                     </div>
