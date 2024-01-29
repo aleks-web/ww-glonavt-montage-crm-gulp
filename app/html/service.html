@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+    <!-- Start include head -->
+    @@include('blocks/head.html', {
+        "title": "Обслуживание"
+    })
+    <!-- End include head -->
+
+    <!-- Start body -->
+    <body class="module-clients">
+        
+        <div class="layout">
+            <!-- Start include menu -->
+            @@include('blocks/menu.html')
+            <!-- End include menu -->
+
+            <div class="main" id="main">
+
+                <!-- Start include header -->
+                @@include('blocks/header.html', {
+                    "title": "Обслуживание"
+                })
+                <!-- End include header -->
+
+                
+
+                <!-- Start region-content -->
+                <div class="region-content" id="region-content">
+                    
+                    <!-- Start control -->
+                    <div class="control">
+                        <div class="control__container">
+                            <div class="control__left">
+                                @@include('components/control-select.html', {"name": "Клиент"})
+                                @@include('components/control-select.html', {"name": "Договор обслуживания"})
+                            </div>
+    
+                            <div class="control__right">
+                                <button class="control__btn btn">Фильтровать</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End control -->
+
+
+                    <!-- Start content table -->
+                    <div class="content-table">
+                        <div class="content-table__container">
+
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th class="text-start" width="12%">Клиент</th>
+                                        <th class="text-start" width="12%">Договор<br>обслуживания</th>
+                                        <th class="text-start">Дата<br>установки</th>
+                                        <th class="text-start">Тип/модель/гос№<br>объекта</th>
+                                        <th class="text-start">Тип/модель<br>устройства/датчика</th>
+                                        <th class="text-center">На<br>удерж.</th>
+                                        <th class="text-center">Удерж.<br>с</th>
+                                        <th class="text-center">Удерж.<br>по</th>
+                                        <th class="text-center">ID</th>
+                                    </tr>
+                                </thead>
+
+                                <tbody>
+                                    <tr class="good">
+                                        <td class="text-start">ИП Новин<br>Фёдо Евгеньевич</td>
+                                        <td class="text-start">3023/12-20-ПР/13<br>от 23.10.2023</td>
+                                        <td class="text-start">23.10.2023</td>
+                                        <td class="text-start">Х664МА72 LADA 4x4, 212140<br><span class="text-secondary">Легковой автомобиль</span></td>
+                                        <td class="text-start">Тахограф<br><span class="text-secondary">АТОЛ Drive 5</span></td>
+                                        <td class="text-center">Нет</td>
+                                        <td class="text-center">23.10.2023</td>
+                                        <td class="text-center">31.12.2024</td>
+                                        <td class="text-center">004024</td>
+                                    </tr>
+                                    <tr class="bad">
+                                        <td class="text-start">ИП Новин<br>Фёдо Евгеньевич</td>
+                                        <td class="text-start">3023/12-20-ПР/13<br>от 23.10.2023</td>
+                                        <td class="text-start">23.10.2023</td>
+                                        <td class="text-start">Х664МА72 LADA 4x4, 212140<br><span class="text-secondary">Легковой автомобиль</span></td>
+                                        <td class="text-start">Тахограф<br><span class="text-secondary">АТОЛ Drive 5</span></td>
+                                        <td class="text-center">Нет</td>
+                                        <td class="text-center">23.10.2023</td>
+                                        <td class="text-center">31.12.2024</td>
+                                        <td class="text-center">004024</td>
+                                    </tr>
+                                    <tr class="favorite">
+                                        <td class="text-start">ИП Новин<br>Фёдо Евгеньевич</td>
+                                        <td class="text-start">3023/12-20-ПР/13<br>от 23.10.2023</td>
+                                        <td class="text-start">23.10.2023</td>
+                                        <td class="text-start">Х664МА72 LADA 4x4, 212140<br><span class="text-secondary">Легковой автомобиль</span></td>
+                                        <td class="text-start">Тахограф<br><span class="text-secondary">АТОЛ Drive 5</span></td>
+                                        <td class="text-center">Нет</td>
+                                        <td class="text-center">23.10.2023</td>
+                                        <td class="text-center">31.12.2024</td>
+                                        <td class="text-center">004024</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+
+                        </div>
+                    </div>
+                    <!-- End content table -->
+
+                </div>
+                <!-- End region-content -->
+                
+            </div>
+        </div>
+
+        <!-- Start include footer -->
+        @@include('blocks/footer.html')
+        <!-- End include footer -->
+    </body>
+    <!-- END body -->
+</html>

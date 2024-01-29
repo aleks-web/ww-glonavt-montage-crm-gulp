@@ -493,6 +493,12 @@ table {
             &.favorite {
                 background-color: var(--row-bg-fahorite);
             }
+            &.good {
+                background-color: var(--clr-3);
+            }
+            &.bad {
+                background-color: var(--clr-2);
+            }
         }
     
         td {
@@ -650,8 +656,6 @@ table {
         }
     }
     // End оформления фотографий в строке таблицы
-
-
 
     a {
         color: var(--clr-7);
