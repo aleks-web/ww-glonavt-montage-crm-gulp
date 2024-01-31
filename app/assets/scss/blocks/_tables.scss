@@ -477,10 +477,6 @@ table {
             height: var(--item-height);
             transition: var(--speed) all;
             border-bottom: 1px solid var(--row-border-bottom-color);
-
-            &:last-child {
-                border-bottom: unset;
-            }
     
             &:hover {
                 background-color: var(--row-color-hover);
@@ -528,6 +524,8 @@ table {
     .td-btn-default {
         height: var(--item-height);
         cursor: context-menu !important;
+        width: 100%;
+        max-width: 5%;
 
         svg {
             width: 28px;
@@ -548,6 +546,8 @@ table {
     .td-btn-favorite {
         height: var(--item-height);
         cursor: context-menu !important;
+        width: 100%;
+        max-width: 5%;
 
         button {
             position: relative;

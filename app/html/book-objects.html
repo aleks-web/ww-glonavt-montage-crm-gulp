@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+    <!-- Start include head -->
+    @@include('blocks/head.html', {
+        "title": "Справочник объектов"
+    })
+    <!-- End include head -->
+
+    <!-- Start body -->
+    <body class="module-clients">
+        
+        <div class="layout">
+            <!-- Start include menu -->
+            @@include('blocks/menu.html')
+            <!-- End include menu -->
+
+            <div class="main" id="main">
+
+                <!-- Start include header -->
+                @@include('blocks/header.html', {
+                    "title": "Справочник объектов"
+                })
+                <!-- End include header -->
+
+                
+
+                <!-- Start region-content -->
+                <div class="region-content" id="region-content">
+                    
+                    <!-- Start control -->
+                    <div class="control">
+                        <div class="control__container">
+                            <div class="control__left">
+                                <div class="control__search input-search" style="max-width: 300px;">
+                                    <input type="text" class="input-search__input" placeholder="Поиск по названию">
+                                </div>
+                            </div>
+    
+                            <div class="control__right">
+                                <button class="control__btn btn">Добавить</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End control -->
+
+
+                    <!-- Start content table -->
+                    <div class="content-table">
+                        <div class="content-table__container">
+
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th class="text-center" width="10%">№ п/п</th>
+                                        <th class="text-start" style="margin-left: 10px">Тип объекта</th>
+                                    </tr>
+                                </thead>
+
+                                <tbody>
+                                    <tr>
+                                        <td class="text-center">1</td>
+                                        <td class="text-start">Легковое ТС</td>
+                                        <td class="td-btn-default">
+                                            <svg class="hover"><use xlink:href="#svg-edit"></use></svg>
+                                        </td>
+                                        <td class="td-btn-default">
+                                            <svg class="hover"><use xlink:href="#svg-del"></use></svg>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-center">2</td>
+                                        <td class="text-start">Автобус ТС</td>
+                                        <td class="td-btn-default">
+                                            <svg class="hover"><use xlink:href="#svg-edit"></use></svg>
+                                        </td>
+                                        <td class="td-btn-default">
+                                            <svg class="hover"><use xlink:href="#svg-del"></use></svg>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+
+                        </div>
+                    </div>
+                    <!-- End content table -->
+
+                </div>
+                <!-- End region-content -->
+                
+            </div>
+        </div>
+
+        <!-- Start include footer -->
+        @@include('blocks/footer.html')
+        <!-- End include footer -->
+    </body>
+    <!-- END body -->
+</html>
