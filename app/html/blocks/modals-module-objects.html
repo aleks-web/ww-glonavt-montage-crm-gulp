@@ -1,3 +1,26 @@
+<!-- Start fancybox modal | Новый тип оборудования | Модуль объекты -->
+<div id="fmodal-new-type-equipment" class="fmodal fmodal-new-type-equipment" style="display: none;">
+    <div class="d-flex flex-column justify-content-center" style="height: 200px;">
+        <div class="fmodal__title">Новый тип оборудования</div>
+
+        <div class="fmodal__content">
+            <div class="fmodal__vertical">
+                @@include('../components/select.html', {
+                    "name": "",
+                    "stText": "Выберите тип оборудования",
+                    "itemName": "Тип"
+                })
+            </div>
+        </div>
+
+        <div class="fmodal__control-btns">
+            <button data-fancybox-close class="fmodal__btn btn-bad">Отменить</button>
+            <button class="fmodal__btn btn-good disable">Сохранить</button>
+        </div>
+    </div>
+</div>
+<!-- End fancybox modal | Новый тип оборудования | Модуль объекты -->
+
 <!-- Start fancybox modal | Новое устройство | Модуль объекты -->
 <div id="fmodal-new-device" class="fmodal fmodal-new-device" style="display: none;">
     <div class="fmodal__title">Новое устройство</div>
@@ -5,12 +28,6 @@
     <div class="fmodal__content">
         <div class="d-flex justify-content-between gap-5">
             <div class="fmodal__vertical">
-
-                @@include('../components/select.html', {
-                    "name": "",
-                    "stText": "Выберите тип оборудования",
-                    "itemName": "Тип"
-                })
 
                 @@include('../components/input-text.html', {"name": "", "value": "", "stText": "Модель устройства"})
 
@@ -167,7 +184,7 @@
                     <button class="modal__header-btn btn">Редактировать</button>
                 </div>
                 <div class="modal__header-group-btns tab-outside" data-outside-id="2">
-                    <button data-fancybox data-src="#fmodal-new-device" class="modal__header-btn btn">Добавить оборудование</button>
+                    <button data-fancybox data-src="#fmodal-new-type-equipment" class="modal__header-btn btn">Добавить оборудование</button>
                 </div>
                 <div class="modal__header-group-btns tab-outside" data-outside-id="4">
                     <button class="modal__header-btn btn">Загрузить</button>
@@ -484,6 +501,12 @@
                                             </td>
                                         </tr>
                                     </tbody>
+
+                                    <tfoot>
+                                        <tr>
+                                            <th class="th-btn-add" colspan="7"><svg data-fancybox data-src="#fmodal-new-device"><use xlink:href="#svg-add"></use></svg></th>
+                                        </tr>
+                                    </tfoot>
                                 </table>
                             </div>
                         </div>
@@ -595,6 +618,11 @@
                                             </td>
                                         </tr>
                                     </tbody>
+                                    <tfoot>
+                                        <tr>
+                                            <th class="th-btn-add" colspan="7"><svg data-fancybox data-src="#fmodal-new-device"><use xlink:href="#svg-add"></use></svg></th>
+                                        </tr>
+                                    </tfoot>
                                 </table>
                             </div>
                         </div>

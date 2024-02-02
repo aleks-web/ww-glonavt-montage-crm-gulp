@@ -412,6 +412,7 @@
 
 table {
     --tableHeader-height: 74px;
+    --tableFooter-height: 54px;
     --color: var(--clr-6, #334D6E);
     --font-size: 1.1rem;
     --border-padding: 24px;
@@ -421,6 +422,8 @@ table {
     --row-color-hover: var(--clr-4, #ECF4FF);
     --row-border-bottom-color: var(--clr-10, transparent);
     --row-bg-fahorite: var(--clr-16, #FFF6E3);
+    --row-bg-good: var(--clr-3);
+    --row-bg-bad: var(--clr-2);
     // End settings row
 
     border-spacing: 0px;
@@ -470,6 +473,36 @@ table {
     }
     // End хедер таблицы
 
+    // Start футер таблицы
+    tfoot {
+        position: sticky;
+        bottom: 0;
+        z-index: 1;
+        height: var(--tableFooter-height);
+        background-color: white;
+
+        tr {
+            box-shadow: 0 0px 20px 0px #f3f3f3;
+        }
+
+        .th-btn-add {
+            padding: 0 !important;
+
+            svg {
+                width: 40px;
+                height: 40px;
+                opacity: 0.7;
+                cursor: pointer;
+                transition: var(--speed) all;
+
+                &:hover {
+                    opacity: 1;
+                }
+            }
+        }
+    }
+    // End футер таблицы
+
 
     // Start Тело таблицы
     tbody {
@@ -490,10 +523,10 @@ table {
                 background-color: var(--row-bg-fahorite);
             }
             &.good {
-                background-color: var(--clr-3);
+                background-color: var(--row-bg-good);
             }
             &.bad {
-                background-color: var(--clr-2);
+                background-color: var(--row-bg-bad);
             }
         }
     

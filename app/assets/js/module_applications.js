@@ -9,9 +9,9 @@ $(document).ready(function (e) {
         }
     });
 
-    $(document).on('click', '.td-btn', function (e) {
-            e.stop
+    $(document).on('click', '[data-modal-application-add]', function (e) {
+        add_body_bg();
+        $('#modal-application-add').addClass('open');
     });
 
 });
-

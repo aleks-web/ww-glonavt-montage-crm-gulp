@@ -56,6 +56,11 @@ textarea {
     }
 }
 
+textarea {
+    resize: vertical;
+    min-height: 3rem; 
+}
+
 .input {
     height: 38px;
 }
