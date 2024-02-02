@@ -1,16 +1,16 @@
 .module-authorization {
-
     height: 100dvh;
 
-    .region {
-        height: inherit;
+    // Start основной layout страницы
+    .region-authorization {
+        height: 100dvh;
         display: flex;
         flex-direction: column;
-        align-items: center;
         justify-content: center;
-        gap: 10vh;
     }
+    // End основной layout страницы
 
+    // Start основная форма авторизации
     .authorization-form {
         &__container {
             width: 510px;
@@ -80,10 +80,16 @@
             }
         }
     }
+    // End основная форма авторизации
     
+    // Start footer авторизации (логотип)
     .authorization-footer {
         display: flex;
         align-items: center;
         justify-content: center;
+        position: absolute;
+        bottom: 5vh;
+        width: 100%;
     }
+    // End footer авторизации (логотип)
 }

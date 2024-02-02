@@ -1,3 +1,9 @@
+// Start Функции для создания и удаления заднего фона
+/*
+    Создано для использования модалками.
+    Может пригодиться в каких-нибудь других случаях.
+    Функции вызываются в других скриптах.
+*/
 function add_body_bg() {
     $('body').addClass('bg');
 }
@@ -5,8 +11,15 @@ function add_body_bg() {
 function remove_body_bg() {
     $('body').removeClass('bg');
 }
+// End Функции для создания и удаления заднего фона
+
+
 
 // Start функция ресайза таблицы в модалке
+/*
+    Пусути костыль, т.к версткой выкрутиться не получилось. Нужно просто тянуть таблицу, если она одна на все занимаемое пространство
+    Скрипт отрабатывает в модалках с классом .modal в табах.
+*/
 function resizeTableModal() {
     $('.modal.open').each(function (index, element) {
 
@@ -37,8 +50,16 @@ function resizeTableModal() {
 // End функция ресайза таблицы в модалке
 
 
+
+
+// Start различные скрипты по работе с модалками
 $(document).ready(function (e) {
     // Start закрытие модального окна
+    /*
+        Это универсальный скрипт. Убирает затемнение фона. Функцией remove_body_bg;
+        Убирает класс open у класса модалки.
+        Атрибут data-modal-close можно ставить на любой элемент. Главное, чтобы элемент был дочерним по отношению к классу modal
+    */
     $(document).on('click', '[data-modal-close]', function (e) {
         $(this).parents('.modal').removeClass('open');
         remove_body_bg();
@@ -46,16 +67,19 @@ $(document).ready(function (e) {
     // End закрытие модального окна
 
     $(window).on("resize", function (e) {
-        resizeTableModal();
+        resizeTableModal(); // При событии ресайза запускаем функцию-костыль для изменения высоты таблиц в открытых модалках
     });
 
     $(document).on('tabsClick', function (e) {
-        resizeTableModal();
+        resizeTableModal(); // tabsClick - это кастомное событие, которое срабатывает в момент клика по табу
     });
 });
+// End различные скрипты по работе с модалками
 
 
 
+
+// Start скрипт для меню
 $(document).ready(function (e) {
     $(document).on('click', '.menu__item-link', function (e) {
         let parent = $(this).parents('.menu__item');
@@ -75,3 +99,4 @@ $(document).ready(function (e) {
 
     });
 });
+// End скрипт для меню
