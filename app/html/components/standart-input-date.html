@@ -1,10 +1,17 @@
 <!--
     @@name - имя поля (заголовок)
     @@pls - плейсхолдер
+
+    Классы:
+    ait-start-today - отключает предыдущие даты
+    air-time - включить время
+    air-select-now - поставить текущую дату по умолчанию
+    air-top - всплывашка с датами становиться сверху
+    air-multi - выбор нескольких дат
 -->
 <div class="standart-input-date">
     @@if(context.name) {
-        <span class="standart-input-date__name">@@name</span>
+    <span class="standart-input-date__name">@@name</span>
     }
-    <input type="date" onchange="this.className=(this.value!=''?'has-value':'')" onfocus="(this.type = 'date')" placeholder="@@if(context.pls) {@@pls} @@if(!context.pls) {Выберите дату}">
+    <input type="text" placeholder="@@if(context.pls) {@@pls} @@if(!context.pls) {Выберите дату}" />
 </div>

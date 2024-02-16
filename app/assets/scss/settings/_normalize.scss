@@ -24,8 +24,6 @@ button {
     outline: none;
 }
 
-  
-
 /* Fancybox normalize */
 .fancybox-bg {
     background-color: var(--clr-6) !important;
@@ -33,4 +31,8 @@ button {
 
 .fancybox-button svg path {
     fill: var(--clr-11) !important;
+}
+
+.air-datepicker-global-container {
+    z-index: 99999 !important;
 }

@@ -16,7 +16,7 @@ body {
     overflow: hidden;
 
     &:before {
-        content: '';
+        content: "";
         position: absolute;
         display: block;
         width: 100%;
@@ -24,7 +24,7 @@ body {
         z-index: 50;
         background-color: transparent;
         z-index: -10;
-        transition: .2s all;
+        transition: 0.2s all;
         backdrop-filter: blur(5px);
     }
 
@@ -36,12 +36,13 @@ body {
     }
 }
 
-input,
+input[type="text"],
+input[type="date"],
 textarea {
     position: relative;
     padding: 10px 20px;
     border-radius: 5px;
-    border: 1px solid var(--border-clr-input, #C7C7C7) !important;
+    border: 1px solid var(--border-clr-input, #c7c7c7) !important;
     color: var(--clr-6);
     font-size: 1rem;
     width: 100%;
@@ -51,14 +52,14 @@ textarea {
     }
 
     &::placeholder {
-        color: var(--clr-12, #9DA6B1);
+        color: var(--clr-12, #9da6b1);
         font-family: Inter;
     }
 }
 
 textarea {
     resize: vertical;
-    min-height: 3rem; 
+    min-height: 3rem;
 }
 
 .input {
