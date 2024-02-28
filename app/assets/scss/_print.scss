@@ -1,0 +1,200 @@
+.page-act {
+    overflow: auto;
+
+    * {
+        color: var(--clr-6);
+    }
+}
+
+// Start акт
+.act {
+    max-width: 1240px;
+    height: 1754px;
+    margin: 0 auto;
+    background-color: white;
+    padding: 20px;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+
+    h2 {
+        font-size: 1.2rem;
+        text-transform: uppercase;
+        margin-bottom: 10px;
+    }
+
+    p {
+        font-style: italic;
+    }
+
+    & ~ .act {
+        margin-top: 50px;
+    }
+}
+// End акт
+
+
+// Start логотип
+.act__logo {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+
+    img {
+        background-color: white;
+        padding: 0 20px;
+        z-index: 1;
+    }
+
+    &:before {
+        position: absolute;
+        content: '';
+        width: 100%;
+        height: 1px;
+        background-color: var(--clr-6);
+        z-index: 0;
+    }
+}
+// End логотип
+
+
+
+
+// Start тайтл
+.act__title {
+    font-size: 1.3rem;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 20px;
+}
+// End тайтл
+
+
+
+// Start обертка для основного содержимого
+.act__content {
+    padding: 0 30px;
+}
+// End обертка для основного содержимого
+
+// Start Блок с текстом
+.act__text {
+    margin-bottom: 20px;
+}
+// End Блок с текстом
+
+
+// Start таблицы
+.act table {
+    margin-bottom: 20px;
+
+    &.main-table-act {
+        td:first-child {
+            border-right: 1px solid var(--clr-10);
+        } 
+        td:last-child {
+            padding-left: var(--border-padding);
+        }
+    }
+
+    .bold {
+        font-weight: bold;
+    }
+
+    thead {
+        height: 30px;
+    }
+
+    tr {
+        height: 30px;
+    }
+    td, th {
+        text-align: start;
+        cursor: context-menu;
+    }
+}
+// End таблицы
+
+// Start блок с подписями
+.act__signatures {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+
+    h2 {
+        margin-bottom: 20px;
+
+        &:last-child {
+            margin: 0;
+        }
+    }
+
+    &-title {
+        font-weight: bold;
+        text-align: center;
+        font-size: 1.2rem;
+        margin-bottom: 30px;
+    }
+
+    &-block {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    &-item {
+        min-height: 40px;
+        max-height: 40px;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: end;
+        align-items: center;
+        margin-bottom: 20px;
+
+        span {
+            display: block;
+
+            &:last-child {
+                font-size: 0.8rem;
+            }
+        }
+
+        hr {
+            width: 100%;
+            min-height: 1px;
+            margin: 3px 0;
+            border: unset;
+            background-color: #000;
+        }
+    }
+}
+// End блок с подписями
+
+// Start галлерея акта
+.act {
+    &__gallery {
+        padding: 0 100px;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        row-gap: 80px;
+        column-gap: 40px;
+
+        img {
+            width: 100%;
+        }
+    }
+}
+// End галлерея акта
+
+.act__footer {
+    padding: 0 30px 30px 30px;
+
+    &-hr {
+        margin-top: 50px;
+        border: unset;
+        height: 2px;
+        background-color: #000;
+    }
+}
